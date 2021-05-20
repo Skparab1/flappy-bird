@@ -5,3 +5,5 @@
 - bird moving up a bit when control c is pressed
 - if you hit the ceiling, you lose (could be removed, in the actual game there is no ceiling)
 - if you hit the ground, you lose
+- right now the bird looks like this: (0)>
+- __________________________________  _|_
