@@ -8,4 +8,4 @@
 - right now the bird looks like this: (0)>
 # What is to be done
 - pipes and crash detection
-- hold press override 
+- hold press override (if you hold control + c the program will crash)
