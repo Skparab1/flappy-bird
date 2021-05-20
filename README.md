@@ -9,3 +9,4 @@
 # What is to be done
 - pipes and crash detection
 - hold press override (if you hold control + c the program will crash)
+  - can be solved with the same thing that I did with crossy road
