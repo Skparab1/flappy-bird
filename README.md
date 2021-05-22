@@ -1,5 +1,7 @@
 # Flappy-bird
 - Replicating the video game flappy bird in Python
+# Crossy road demo:
+![](flappy bird demo.gif)
 # What is done so far:
 - bird moving up a bit when control c is pressed
 - if you hit the ceiling, you lose (could be removed, in the actual game there is no ceiling)
