@@ -1,13 +1,18 @@
 import time
+from random import randint
 def clearscreen():
     print('\n'*50)
 def addbird(line):
+    #line = line[:4]
+    line.replace('|','')
     line = '(0)>' + line
-    line.replace(line[4:6],'')
     return line
 height = 10
 adder = 0
-line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18 = '                     |','                     |','                     |','                     |','                     |','                     |','                     |','          ','          ',' (0)>     ','          ','          ','          ','          ','          ','          ','          ','          '
+randomize = randint(1,3)
+if randomizer == 1:
+    r1,r2,r3 = '|'s
+line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18,templine = '                     |','                     |','                     |','                     |','                     |','                     |','                     |','          ','          ',' (0)>     ','          ','          ','          ','          ','          ','          ','          ','          ','                        |'
 while True:
     try:
         clearscreen()
@@ -18,7 +23,7 @@ while True:
         print(line18),print(line17),print(line16),print(line15),print(line14),print(line13),print(line12),print(line11),print(line10),print(line9),print(line8),print(line7),print(line6),print(line5),print(line4),print(line3),print(line2),print(line1)
         #removing bird fromlane content
         line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18 = line1.replace('(0)>',''), line2.replace('(0)>',''),line3.replace('(0)>',''),line4.replace('(0)>',''),line5.replace('(0)>',''),line6.replace('(0)>',''),line7.replace('(0)>',''),line8.replace('(0)>',''),line9.replace('(0)>',''),line10.replace('(0)>',''),line11.replace('(0)>',''),line12.replace('(0)>',''),line13.replace('(0)>',''),line14.replace('(0)>',''),line15.replace('(0)>',''),line16.replace('(0)>',''),line17.replace('(0)>',''),line18.replace('(0)>','')
-        line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18 = line1[1:100],line2[1:100],line3[1:100],line4[1:100],line5[1:100],line6[1:100],line7[1:100],line8[1:100],line9[1:100],line10[1:100],line11[1:100],line12[1:100],line13[1:100],line14[1:100],line15[1:100],line16[1:100],line17[1:100],line18[1:100]
+        line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18, templine = line1[1:100],line2[1:100],line3[1:100],line4[1:100],line5[1:100],line6[1:100],line7[1:100],line8[1:100],line9[1:100],line10[1:100],line11[1:100],line12[1:100],line13[1:100],line14[1:100],line15[1:100],line16[1:100],line17[1:100],line18[1:100], templine[1:100]
         height -= 0.5
         #print(height)
         print('-'*100)
