@@ -1,18 +1,32 @@
-import time
+import time, shelve
 from random import randint
 def clearscreen():
     print('\n'*50)
 def addbird(line):
     line = '(0)>' + line[4:]
     return line
+def shelvewrite(textfilename,towrite): #write to text file
+    textfilenametxt = textfilename + '.txt'
+    writer = shelve.open(str(textfilenametxt))
+    writer[str(textfilename)] = towrite
+    writer.close()
+def shelveread(textfilename): # read form text file
+    textfilenametxt = textfilename + '.txt'
+    reader = shelve.open(str(textfilenametxt))
+    text = reader[str(textfilename)]
+    reader.close()
+    return text
+def shelveappend(textfilename, toappend): #append to text file
+    textfilenametxt = textfilename + '.txt'
+    read = shelveread(textfilename)
+    toappend = str(toappend) + str(read)
+    shelvewrite(textfilename, toappend)
+name = input('Enter your name: ')
 height = 10
 mover = 'up'
 try:
     while True:
-        print('-'*100)
-        print('\n'*(18-height))
-        print('(0)>')
-        print('\n'*height)
+        print('-'*100), print('\n'*(18-height)), print('(0)>'), print('\n'*height)
         if mover == 'up':
             height +=1
         else:
@@ -130,5 +144,23 @@ while True:
         time.sleep(0.1)
     finally:
         blank = ''
-print('You have lost')
-print('your score was ' , score)
+appended = False
+while True:
+    try:
+        print('you have lost')
+        print('your score was ', score)
+        toadd = name + (' '*(20-len(name))) + str(score) + '\n'
+        if appended == False:
+            try:
+                shelveappend('flappybirdscores', toadd)
+            except:
+                shelvewrite('flappybirdscores', toadd)
+            appended = True
+        print('\n\n Scoreboard: ')
+        print(shelveread('flappybirdscores'))
+        choice = input('Press enter to return to the main menu. Press q and enter to quit  ')
+        if choice == 'scoreboard.clear':
+            shelvewrite('flappybirdscores', '')
+        break
+    except:
+        blank = ''
