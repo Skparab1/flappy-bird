@@ -13,8 +13,6 @@
 # What is to be done
 - multiple levels (only one right now)
 - make animation smoother (right now the bird blinks a lot)
-- randomize obstacles
-- add scoring (likely I will use that same scoring algorithm used for dino game [time alive])
-- add scoreboard with text file storage
 - hold press override (if you hold control + c the program will crash)
   - can be solved with the same thing that I did with crossy road
+- Easter eggs (coming soon!)
