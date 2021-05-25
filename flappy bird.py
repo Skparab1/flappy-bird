@@ -149,6 +149,11 @@ while True:
     try:
         print('you have lost')
         print('your score was ', score)
+        linein += 1
+        linecontentabove = line1 if linein == 1 else (line2 if linein == 2 else (line3 if linein == 3 else (line4 if linein == 4 else (line5 if linein == 5 else (line6 if linein == 6 else (line7 if linein == 7 else (line8 if linein == 8 else (line9 if linein == 9 else (line10 if linein == 10 else (line11 if linein == 11 else (line12 if linein == 12 else (line12 if linein == 12 else (line13 if linein == 13 else (line14 if linein == 14 else (line15 if linein == 15 else (line16 if linein == 16 else (line17 if linein == 17 else (line18 if linein == 18 else (''*100)))))))))))))))))))
+        linein -= 2
+        linecontentbelow = line1 if linein == 1 else (line2 if linein == 2 else (line3 if linein == 3 else (line4 if linein == 4 else (line5 if linein == 5 else (line6 if linein == 6 else (line7 if linein == 7 else (line8 if linein == 8 else (line9 if linein == 9 else (line10 if linein == 10 else (line11 if linein == 11 else (line12 if linein == 12 else (line12 if linein == 12 else (line13 if linein == 13 else (line14 if linein == 14 else (line15 if linein == 15 else (line16 if linein == 16 else (line17 if linein == 17 else (line18 if linein == 18 else (''*100)))))))))))))))))))
+        print(' image of crash below'),print(linecontent),print(linecontentabove),print(linecontentbelow)
         toadd = name + (' '*(20-len(name))) + str(score) + '\n'
         if appended == False:
             try:
