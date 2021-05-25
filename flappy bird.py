@@ -33,7 +33,7 @@ try:
             height -= 1
         if height >= 12:
             mover = 'down'
-        if height <= 8:
+        if height <= 9:
             mover = 'up'
         print('press control c to start')
         time.sleep(0.1)
