@@ -1,5 +1,8 @@
 # Flappy-bird
 - Replicating the video game flappy bird in Python
+# Highscores
+- Current high score is 663, set by Shubham
+- Open a pull request if you beat it! ;)
 # Crossy road demo:
 ![](flappy_bird_demo_v0.0.4.gif)
 # What is done so far:
