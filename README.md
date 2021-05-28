@@ -13,11 +13,10 @@
 - only one level
 - crash detection works
 - right now the bird looks like this: (0)>
+- hold press override (if you hold control + c the program will crash)
 # What is to be done
 - multiple levels (only one right now)
 - make animation smoother (right now the bird blinks a lot)
-- hold press override (if you hold control + c the program will crash)
-  - can be solved with the same thing that I did with crossy road
 - Easter eggs (coming soon!)
 # Bugs
 - Obstacles automatically seal up (Solved!)
