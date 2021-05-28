@@ -19,3 +19,6 @@
 - hold press override (if you hold control + c the program will crash)
   - can be solved with the same thing that I did with crossy road
 - Easter eggs (coming soon!)
+# Bugs
+- Obstacles automatically seal up (Solved!)
+- Random unexplained crashed of bird
