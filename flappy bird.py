@@ -156,6 +156,7 @@ while choice != 'q':
             choice = input('Press enter to return to the main menu. Press q and enter to quit  ')
             if choice == 'scoreboard.clear':
                 shelvewrite('flappybirdscores', '')
+                blank = ''
             break
         except:
             blank = ''
