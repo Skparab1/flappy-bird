@@ -21,4 +21,4 @@
 - Easter eggs (coming soon!)
 # Bugs
 - Obstacles automatically seal up (Solved!)
-- Random unexplained crashed of bird
+- Random unexplained crashes of bird
