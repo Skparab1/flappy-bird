@@ -22,6 +22,7 @@ def shelveappend(textfilename, toappend): #append to text file
     toappend = str(toappend) + str(read)
     shelvewrite(textfilename, toappend)
 choice = ''
+held = False
 while choice != 'q':
     clearscreen()
     name = input('Enter your name: ')
@@ -83,7 +84,7 @@ while choice != 'q':
                 blank = ''
             height -= 0.5
             print('-'*100)
-            print('score: ',score,'    height: ',height)
+            print('Score: ',score,'     Player: ',name)
             time.sleep(0.1)
             count += 1
             score += 1
@@ -136,15 +137,14 @@ while choice != 'q':
         except:
             height += 2
             time.sleep(0.1)
-        finally:
-            blank = ''
     appended = False
     while True:
         try:
             print('you have lost')
             print('your score was ', score)
-            print(' image of crash below'),print(linecontentabove[:100]),print(linecontentshow[:100]),print(linecontentbelow[:100])
+            print(' image of crash below'),print(linecontentabove[:20]),print(linecontentshow[1:20]),print(linecontentbelow[:20])
             toadd = name + (' '*(20-len(name))) + str(score) + '\n'
+            read = shelveread('flappybirdscores')
             if appended == False:
                 try:
                     shelveappend('flappybirdscores', toadd)
@@ -153,10 +153,16 @@ while choice != 'q':
                 appended = True
             print('\n\n Scoreboard: ')
             print(shelveread('flappybirdscores'))
-            choice = input('Press enter to return to the main menu. Press q and enter to quit  ')
+            print('Press enter to return to the main menu. Press q and enter to quit  ')
+            choice = input('you can also enter an override command like scoreboard.clear or scoreboard.dontsave\n')
             if choice == 'scoreboard.clear':
                 shelvewrite('flappybirdscores', '')
-                blank = ''
+                print('scoreboard shown below. press enter to continue')
+                print(shelveread('flappybirdscores'))
+            if choice == 'scoreboard.dontsave':
+                shelvewrite('flappybirdscores',read)
+                print('scoreboard shown below. press enter to continue')
+                print(shelveread('flappybirdscores'))
             break
         except:
             blank = ''
