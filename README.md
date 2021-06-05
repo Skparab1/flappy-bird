@@ -6,7 +6,7 @@
 # Crossy road demo:
 ![](flappy_bird_demo_v0.0.4.gif)
 # What is done so far:
-- bird moving up a bit when control c is pressed
+- bird moving up when control c is pressed
 - if you hit the ceiling, you lose (could be removed, in the actual game there is no ceiling)
 - if you hit the ground, you lose
 - there are pipes, but they are not randomized, they are there by default and are always the same
